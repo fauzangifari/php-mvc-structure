@@ -1,52 +1,34 @@
 <?php
 
-namespace ProgrammerZamanNow\Belajar\PHP\MVC\Controller;
+namespace App\Controller;
 
-use ProgrammerZamanNow\Belajar\PHP\MVC\App\View;
+use App\App\View;
 
 class HomeController
 {
 
-    function index(): void
+    function index():void
     {
         $model = [
-            "title" => "Belajar PHP MVC",
-            "content" => "Selamat Belajar PHP MVC dari Programmer Zaman Now"
+            "title" => "Hello World",
+            "content" => "This is the content of the page"
         ];
-
-        View::render('Home/index', $model);
+        View::render("Home/index", $model);
     }
 
-    function hello(): void
+    function hello():void
     {
-        echo "HomeController.hello()";
+        echo "Hello from HomeController.hello\n";
     }
 
-    function world(): void
+    function world():void
     {
-        echo "HomeController.world()";
+        echo "Hello from HomeController.world\n";
     }
 
-    function about(): void
+    function login():void
     {
-        echo "Author : Eko Kurniawan Khannedy";
-    }
-
-    function login(): void
-    {
-        $request = [
-            "username" => $_POST['username'],
-            "password" => $_POST['password']
-        ];
-
-        $user = [
-
-        ];
-
-        $response = [
-            "message" => "Login Sukses"
-        ];
-        // kirimkan response ke view
+        echo "Hello from HomeController.login\n";
     }
 
 }
